@@ -1,0 +1,97 @@
+{
+  "executed_at": "2026-05-16T18:58:59",
+  "main_city_id": "brasilia",
+  "rain_threshold_mm": 1.0,
+  "split_date": "2025-01-01",
+  "fetch": {
+    "source": "Open-Meteo Historical Weather API",
+    "start_date": "2021-01-01",
+    "end_date": "2026-05-15",
+    "city_count": 3,
+    "row_count": 5883,
+    "combined_output_path": "C:\\Users\\enzoi\\OneDrive\\Documentos\\Projeto Integrador 1\\data\\raw\\weather_multi_city_daily.csv",
+    "used_cached_data": false,
+    "cities": [
+      {
+        "city_id": "brasilia",
+        "city_name": "Brasilia",
+        "row_count": 1961,
+        "output_path": "C:\\Users\\enzoi\\OneDrive\\Documentos\\Projeto Integrador 1\\data\\raw\\weather_brasilia_daily.csv",
+        "request_url": "https://archive-api.open-meteo.com/v1/archive?latitude=-15.793889&longitude=-47.882778&start_date=2021-01-01&end_date=2026-05-15&daily=temperature_2m_mean%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum%2Crain_sum%2Cprecipitation_hours%2Cwind_speed_10m_max%2Cwind_speed_10m_mean%2Crelative_humidity_2m_mean&timezone=America%2FSao_Paulo",
+        "used_cached_data": false,
+        "fetch_error": ""
+      },
+      {
+        "city_id": "goiania",
+        "city_name": "Goiania",
+        "row_count": 1961,
+        "output_path": "C:\\Users\\enzoi\\OneDrive\\Documentos\\Projeto Integrador 1\\data\\raw\\weather_goiania_daily.csv",
+        "request_url": "https://archive-api.open-meteo.com/v1/archive?latitude=-16.686891&longitude=-49.264794&start_date=2021-01-01&end_date=2026-05-15&daily=temperature_2m_mean%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum%2Crain_sum%2Cprecipitation_hours%2Cwind_speed_10m_max%2Cwind_speed_10m_mean%2Crelative_humidity_2m_mean&timezone=America%2FSao_Paulo",
+        "used_cached_data": false,
+        "fetch_error": ""
+      },
+      {
+        "city_id": "sao_paulo",
+        "city_name": "Sao Paulo",
+        "row_count": 1961,
+        "output_path": "C:\\Users\\enzoi\\OneDrive\\Documentos\\Projeto Integrador 1\\data\\raw\\weather_sao_paulo_daily.csv",
+        "request_url": "https://archive-api.open-meteo.com/v1/archive?latitude=-23.55052&longitude=-46.633308&start_date=2021-01-01&end_date=2026-05-15&daily=temperature_2m_mean%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum%2Crain_sum%2Cprecipitation_hours%2Cwind_speed_10m_max%2Cwind_speed_10m_mean%2Crelative_humidity_2m_mean&timezone=America%2FSao_Paulo",
+        "used_cached_data": false,
+        "fetch_error": ""
+      }
+    ]
+  },
+  "raw_validation": {
+    "is_valid": true,
+    "row_count": 5883,
+    "errors": []
+  },
+  "features": {
+    "input_rows": 1961,
+    "feature_rows": 1960,
+    "rain_threshold_mm": 1.0,
+    "target_rain_rate": 0.3791,
+    "output_path": "C:\\Users\\enzoi\\OneDrive\\Documentos\\Projeto Integrador 1\\data\\processed\\weather_brasilia_features.csv"
+  },
+  "feature_validation": {
+    "is_valid": true,
+    "row_count": 1960,
+    "errors": []
+  },
+  "model_test_metrics": {
+    "row_count": 499,
+    "period": {
+      "start": "2025-01-01",
+      "end": "2026-05-14"
+    },
+    "accuracy": 0.7916,
+    "precision": 0.7318,
+    "recall": 0.7816,
+    "f1": 0.7559,
+    "rain_rate": 0.4128,
+    "predicted_rain_rate": 0.4409,
+    "confusion_matrix": {
+      "true_positive": 161,
+      "true_negative": 234,
+      "false_positive": 59,
+      "false_negative": 45
+    }
+  },
+  "predictions": {
+    "row_count": 1960,
+    "output_path": "C:\\Users\\enzoi\\OneDrive\\Documentos\\Projeto Integrador 1\\outputs\\reports\\rain_predictions.csv"
+  },
+  "eda": {
+    "input_path": "C:\\Users\\enzoi\\OneDrive\\Documentos\\Projeto Integrador 1\\data\\raw\\weather_multi_city_daily.csv",
+    "row_count": 5883,
+    "city_count": 3,
+    "summary_json": "C:\\Users\\enzoi\\OneDrive\\Documentos\\Projeto Integrador 1\\outputs\\reports\\weather_city_comparison_summary.json",
+    "summary_csv": "C:\\Users\\enzoi\\OneDrive\\Documentos\\Projeto Integrador 1\\outputs\\reports\\weather_city_comparison_summary.csv",
+    "figures": [
+      "C:\\Users\\enzoi\\OneDrive\\Documentos\\Projeto Integrador 1\\outputs\\figures\\eda_taxa_chuva_mensal_por_cidade.png",
+      "C:\\Users\\enzoi\\OneDrive\\Documentos\\Projeto Integrador 1\\outputs\\figures\\eda_precipitacao_media_mensal_por_cidade.png",
+      "C:\\Users\\enzoi\\OneDrive\\Documentos\\Projeto Integrador 1\\outputs\\figures\\eda_temperatura_media_mensal_por_cidade.png",
+      "C:\\Users\\enzoi\\OneDrive\\Documentos\\Projeto Integrador 1\\outputs\\figures\\eda_precipitacao_anual_por_cidade.png"
+    ]
+  }
+}

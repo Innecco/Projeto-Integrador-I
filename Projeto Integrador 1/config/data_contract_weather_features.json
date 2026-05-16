@@ -1,0 +1,32 @@
+{
+  "required_columns": [
+    "date",
+    "target_date",
+    "month",
+    "temperature_2m_mean",
+    "temperature_range",
+    "precipitation_sum",
+    "rain_sum",
+    "precipitation_hours",
+    "wind_speed_10m_max",
+    "wind_speed_10m_mean",
+    "relative_humidity_2m_mean",
+    "rain_today",
+    "target_rain_tomorrow"
+  ],
+  "numeric_columns": [
+    "month",
+    "temperature_2m_mean",
+    "temperature_range",
+    "precipitation_sum",
+    "rain_sum",
+    "precipitation_hours",
+    "wind_speed_10m_max",
+    "wind_speed_10m_mean",
+    "relative_humidity_2m_mean",
+    "rain_today",
+    "target_rain_tomorrow"
+  ],
+  "unique_key": "date"
+}
+
