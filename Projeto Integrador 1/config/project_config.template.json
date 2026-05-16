@@ -1,0 +1,11 @@
+{
+  "project_name": "PREENCHER_NOME_DO_PROJETO",
+  "data_contract_path": "config/data_contract.json",
+  "raw_data_dir": "data/raw",
+  "processed_data_dir": "data/processed",
+  "reports_dir": "outputs/reports",
+  "target_column": "PREENCHER_COLUNA_ALVO",
+  "business_metric": "PREENCHER_METRICA_DE_NEGOCIO",
+  "technical_metric": "PREENCHER_METRICA_TECNICA"
+}
+
